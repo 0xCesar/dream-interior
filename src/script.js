@@ -6,7 +6,14 @@ import GUI from 'lil-gui'
 import gsap from 'gsap'
 import particlesVertexShader from './shaders/particles/vertex.glsl'
 import particlesFragmentShader from './shaders/particles/fragment.glsl'
-
+import img0 from './shaders/particles/0.png';
+import img1 from './shaders/particles/1.png';
+import img2 from './shaders/particles/2.png';
+import img3 from './shaders/particles/3.png';
+import img4 from './shaders/particles/4.png';
+import img5 from './shaders/particles/5.png';
+import img6 from './shaders/particles/6.png';
+import img7 from './shaders/particles/7.png';
 
 /**
  * Base
@@ -94,14 +101,14 @@ const angles = 360/nbImage;
 
 /* Images */ 
 var textureLoader = new THREE.TextureLoader();
-const texture0 = textureLoader.load('./shaders/particles/0.png');
-const texture1 = textureLoader.load('./shaders/particles/1.png');
-const texture2 = textureLoader.load('./shaders/particles/2.png');
-const texture3 = textureLoader.load('./shaders/particles/3.png');
-const texture4 = textureLoader.load('./shaders/particles/4.png');
-const texture5 = textureLoader.load('./shaders/particles/5.png');
-const texture6 = textureLoader.load('./shaders/particles/6.png');
-const texture7 = textureLoader.load('./shaders/particles/7.png'); 
+const texture0 = textureLoader.load(img0);
+const texture1 = textureLoader.load(img1);
+const texture2 = textureLoader.load(img2);
+const texture3 = textureLoader.load(img3);
+const texture4 = textureLoader.load(img4);
+const texture5 = textureLoader.load(img5);
+const texture6 = textureLoader.load(img6);
+const texture7 = textureLoader.load(img7); 
 
 const tabTexture = [texture0, texture1, texture2, texture3, texture4, texture5, texture6, texture7]
 /* 
