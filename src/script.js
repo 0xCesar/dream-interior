@@ -215,16 +215,28 @@ function handleMouseMove(event) {
 function handleMouseUp(event) {
     click = false;
    finalX = initX + event.clientX
+   console.log(initX)
+   console.log(event.clientX)
     //camera.rotateY((initX - finalX)/100)
     //console.log((initX - finalX) )
     
     if(!click){
-
+        if(initX > event.clientX)
+        {
+            gsap.to(group.rotation, 
+                {
+                    y : group.rotation.y  - finalX * 0.001
+                })
+        }
+        if(initX < event.clientX)
+        {
+            gsap.to(group.rotation, 
+                {
+                    y : group.rotation.y  + finalX * 0.001
+                })
+        }
       //  group.rotation.y += - ((initX - finalX) * 0.00001);
-        gsap.to(group.rotation, 
-            {
-                y : group.rotation.y  - finalX * 0.001
-            })
+
        // let force = (initX + finalX) * 0.0001;
       //  gsap.to(group.rotation, {duration: 0.5, y: 0.001, ease: 'power2.out'})
       //  gsap.fromTo(group.rotation, {y : force}, {duration: 0.5, y: 0.001, ease: 'power2.out'})
